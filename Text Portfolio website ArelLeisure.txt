@@ -1,0 +1,182 @@
+========== HOME ==========
+.home__greeting
+Hello, I'm
+
+.home__name
+Ronel Cinco
+
+.home__education
+Pro Player
+
+.home__social-link
+https://www.facebook.com/
+https://twitter.com/
+https://www.tiktok.com/
+
+.home__scroll-name
+Scroll Down
+
+========== ABOUT ==========
+.section__subtitle | .section__title
+My Intro
+About Me
+
+.about__title | .about__subtitle
+Game Experience
+10 Years Gaming
+
+Completed
+48 + Projects
+
+Support
+Online 24/7
+
+.about__description
+Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae nesciunt earum modi tenetur, beatae laborum ipsum ipsam ipsa molestias, autem unde placeat! Repudiandae nihil adipisci illum. Nisi adipisci beatae consequatur?
+
+========== SKILLS ==========	
+.section__subtitle | .section__title
+My abilities
+My Experience
+
+.skills__title
+Pro Player
+Work Experience
+
+.skills__name | .skills__level
+Good Making Decision
++70%
+
+Tactical Play
++89.9%
+
+Quick Reflexes
++60%
+
+Problem Solving Skills
++76%
+
+Strategic Play
++85%
+
+Hand Eye Coordination
++88.5%
+
+Production
+2019 - 2020
+
+Service Crew
+2020 - 2021
+
+Barista
+2021 - 2022
+
+
+========== SERVICES ==========
+.section__subtitle | .section__title
+Photos
+Highlight
+
+.services__title
+ronel images
+
+.services__modal-description
+none
+
+========== WORK  ==========
+.section__subtitle | .section__title
+Photos
+Highlight
+
+.work__item
+All images
+Profile image
+Untitled image      
+Ya'Del image
+Anime image
+
+.work__title
+All
+
+Profile
+
+Untitled
+
+Ya' Del
+
+Anime
+========== TESTIMONIALS ==========
+.section__subtitle | .section__title
+Following 
+Friends
+
+.testimonial__name
+Del
+image
+
+JM
+image
+
+Unknown
+image
+
+.testimonial__description
+Del fb Link
+https://www.facebook.com/synlyly
+
+JM fb Link
+https://www.facebook.com/jmcinco.petilonaii
+
+========== CONTACT ==========
+.section__subtitle | .section__title
+Get in touch
+Contact Me
+
+.contact__title
+Talk to me
+
+Write me your project
+
+.contact__card-title | .contact__card-data
+Email
+nenelcinco@gmail.com
+user@gmail.com
+
+Contact Number
+999-888-777
+
+Messenger
+https://www.messenger.com/t/100033626534842
+user.fb123
+
+.contact__button
+mailto:examplemail@correo.com
+
+https://api.whatsapp.com/send?phone=51123456789&text=Hello, more information!
+
+https://m.me/bedimcode
+
+========== FOOTER ==========
+.footer__title
+Ronel
+
+.footer__link
+About
+
+Experience
+
+Photos
+
+Friends
+
+.footer__social-link
+https://www.facebook.com/
+https://www.facebook.com/nenel018
+https://twitter.com/
+https://twitter.com/shimoto_rl
+https://www.tiktok.com/
+https://vt.tiktok.com/ZSRYpSs6q
+
+
+.footer__copy
+&#169; Patatas. All rigths reserved
