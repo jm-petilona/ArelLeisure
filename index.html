@@ -446,20 +446,22 @@
                     <div class="contact__content">
                         <h3 class="contact__title">Message me</h3>
 
-                        <form action="" class="contact__form">
+                        <form onsubmit="sendEmail(); reset; return false;" class="contact__form">
                             <div class="contact__form-div">
                                 <label for="" class="contact__form-tag">Name</label>
-                                <input type="text" placeholder="Insert your name" class="contact__form-input">
+                                <input type="text" id="name" placeholder="Insert your name" required class="contact__form-input">
                             </div>
                             <div class="contact__form-div">
                                 <label for="" class="contact__form-tag">Mail</label>
-                                <input type="text" placeholder="Insert your mail" class="contact__form-input">
+                                <input type="text" id="email" placeholder="Insert your mail" required class="contact__form-input">
                             </div>
                             <div class="contact__form-div contact__form-area">
                                 <label for="" class="contact__form-tag">Message</label>
-                                <textarea name="" id="" cols="30" rows="10" placeholder="write your message" class="contact__form-input"></textarea>
+                                <textarea name="" id="message" cols="30" rows="10" placeholder="write your message" required class="contact__form-input"></textarea>
                             </div>
-                            <button class="button button--send">Send Message</button>
+                            <a href="">
+                                <button class="button button--send">Send Message</button>
+                            </a>
                         </form>
                     </div>
                 </div>
@@ -497,6 +499,25 @@
                 </span>
             </div>
         </footer>
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+        <script>
+            function sendEmail(){
+                            Email.send({
+                SecureToken: 'df44b4b2-daf2-4605-91a5-07f81c88fcc2',
+                To : 'officialjmacc@gmail.com',
+                From : document.getElementById('email').value,
+                Subject : "New Messages",
+                Body : "Email: " + document.getElementById('email').value +
+                       "Name: " + document.getElementById('name').value + 
+                       "Message: " + document.getElementById('message').value
+            }).then(
+            message => {
+                if(message == 'OK') alert('Succesfully Send')
+                else alert('Error Send')
+            }
+            );
+            }
+        </script>
         <script src="./assets/js/scrollreveal.min.js"></script>
         <script src="./assets/js/swiper-bundle.min.js"></script>
         <script src="./assets/js/mixitup.min.js"></script>
