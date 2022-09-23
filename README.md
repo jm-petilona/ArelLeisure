@@ -1,6 +1,5 @@
-# 🔥 Responsive Portfolio Website Ronel
-## Personal Web
-
+# 🔥 Responsive Web Portfolio
+## Personal Website
 - Responsive Portfolio Website Using HTML CSS & JavaScript
 - Smooth scrolling in each section.
 - Includes a dark and light mode.
