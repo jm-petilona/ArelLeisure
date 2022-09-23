@@ -502,20 +502,20 @@
         <script src="https://smtpjs.com/v3/smtp.js"></script>
         <script>
             function sendEmail(){
-                            Email.send({
-                SecureToken: 'df44b4b2-daf2-4605-91a5-07f81c88fcc2',
-                To : 'officialjmacc@gmail.com',
-                From : document.getElementById('email').value,
-                Subject : "New Messages",
-                Body : "Email: " + document.getElementById('email').value +
-                       "Name: " + document.getElementById('name').value + 
-                       "Message: " + document.getElementById('message').value
-            }).then(
-            message => {
-                if(message == 'OK') alert('Succesfully Send')
-                else alert('Error Send')
-            }
-            );
+                Email.send({
+                    SecureToken: "b0f72518-adbe-4a17-83c6-e42381b7cae9",
+                    To : 'nenelcinco@gmail.com',
+                    From : document.getElementById('#email').value,
+                    Subject : "New Messages",
+                    Body : "<br>Email: " + document.getElementById('#email').value +
+                        "<br>Name: " + document.getElementById('#name').value + 
+                        "Message: " + document.getElementById('#message').value
+                }).then(
+                message => {
+                    if(message == "OK") alert("Successfully Send!");
+                    else alert("Error!");
+                }
+                );
             }
         </script>
         <script src="./assets/js/scrollreveal.min.js"></script>
