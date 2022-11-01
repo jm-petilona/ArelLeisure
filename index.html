@@ -12,11 +12,13 @@
     <body>
         <header class="header" id="header">
             <nav class="nav container">
-                <a href="#" class="nav__logo">
+                    <div class="img--logo">
+                        <img src="assets/img/arelLogo-removebg-preview.png" class="img-log" alt="">
+                    </div>
+                <!-- <a href="#" class="nav__logo">
                     <i class='bx bxs-shapes'></i>
-                    <!-- <img src="./assets/img/logo.jpg" alt="" class="img-logo"> -->
                     ArelLeisure
-                </a>
+                </a> -->
                 <div class="nav__menu">
                     <ul class="nav__list">
                         <li class="nav__item">
@@ -380,24 +382,6 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="testimonial__card swiper-slide">
-                            <img src="./assets/img/unknown.jpg" width="128px" height="128px" alt="" class="testimonial__img">
-
-                            <h3 class="testimonial__name">
-                                Kursten Claire Homecillo
-                            </h3>
-                            <div>
-                                <ul class="testimonial__grid">
-                                    <li class="list__name">
-                                        <i class='bx bx-user-plus list__icon'></i>
-                                        Follow
-                                    </li>
-                                    <li class="list__name"><a href="https://www.facebook.com/profile.php?id=100009415107722" target="_blank" class="photos__button">
-                                        View Profile <i class='bx bx-right-arrow-alt photos__icon'></i>
-                                    </a></li>
-                                </ul>
-                            </div>
-                        </div>
                     </div>
                     <div class="swiper-pagination"></div>
                 </div>
@@ -446,22 +430,21 @@
                     <div class="contact__content">
                         <h3 class="contact__title">Message me</h3>
 
-                        <form onsubmit="sendEmail(); reset; return false;" class="contact__form">
+                        <form class="contact__form" id="contact-form">
                             <div class="contact__form-div">
                                 <label for="" class="contact__form-tag">Name</label>
-                                <input type="text" id="name" placeholder="Insert your name" required class="contact__form-input">
+                                <input type="text" name="user_name" id="contact-name" required placeholder="Insert your name" class="contact__form-input">
                             </div>
                             <div class="contact__form-div">
                                 <label for="" class="contact__form-tag">Mail</label>
-                                <input type="text" id="email" placeholder="Insert your mail" required class="contact__form-input">
+                                <input type="email" name="user_email" id="contact-email" required placeholder="Insert your mail" class="contact__form-input">
                             </div>
                             <div class="contact__form-div contact__form-area">
                                 <label for="" class="contact__form-tag">Message</label>
-                                <textarea name="" id="message" cols="30" rows="10" placeholder="write your message" required class="contact__form-input"></textarea>
+                                <textarea name="user_message" id="contact-message" required cols="30" rows="10" placeholder="write your message" class="contact__form-input"></textarea>
+                                <p class="contact__message-alert" id="message-alert"></p>
                             </div>
-                            <a href="">
-                                <button class="button button--send">Send Message</button>
-                            </a>
+                                <button type="submit" class="button button--send" value="send">Send Message</button>
                         </form>
                     </div>
                 </div>
@@ -499,28 +482,10 @@
                 </span>
             </div>
         </footer>
-        <script src="https://smtpjs.com/v3/smtp.js"></script>
-        <script>
-            function sendEmail(){
-                Email.send({
-                    SecureToken: "b0f72518-adbe-4a17-83c6-e42381b7cae9",
-                    To : 'nenelcinco@gmail.com',
-                    From : document.getElementById('#email').value,
-                    Subject : "New Messages",
-                    Body : "<br>Email: " + document.getElementById('#email').value +
-                        "<br>Name: " + document.getElementById('#name').value + 
-                        "Message: " + document.getElementById('#message').value
-                }).then(
-                message => {
-                    if(message == "OK") alert("Successfully Send!");
-                    else alert("Error!");
-                }
-                );
-            }
-        </script>
         <script src="./assets/js/scrollreveal.min.js"></script>
         <script src="./assets/js/swiper-bundle.min.js"></script>
         <script src="./assets/js/mixitup.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
         <script src="./assets/js/main.js"></script>
     </body>
 </html>

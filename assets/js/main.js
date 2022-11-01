@@ -126,3 +126,38 @@ const sr = ScrollReveal({
 sr.reveal('.home__data')
 sr.reveal('.home__handle' , {delay: 700})
 sr.reveal('.home__social, .home__scroll' , {delay: 900, origin:'bottom'})
+
+// Emailjs
+const contactForm = document.getElementById('contact-form'),
+        contactName = document.getElementById('contact-name'),
+        contactEmail = document.getElementById('contact-email'),
+        contactMessage = document.getElementById('contact-message'),
+        contactAlert = document.getElementById('message-alert')
+
+const emoji = String.fromCodePoint(0x1F4E7);
+
+const sendEmail = (e) =>{
+    e.preventDefault();
+    
+    if(contactName.value === '' || contactEmail.value === '' || contactMessage.value === ''){
+        contactAlert.classList.remove('color-blue')
+        contactAlert.classList.add('color-red')
+
+        contactAlert.textContent = `Write all the input fields ${emoji}`;
+    }else{
+        //serviceID - templateId - #form - publicKey
+        /* A service that allows you to send emails from your website. */
+        emailjs.sendForm('service_zl415','template_tv61nfx','#contact-form','ZOVLxcXmeOM7QNQa1')
+            .then(()=>{
+                contactAlert.classList.add('color-blue')
+                contactMessage.textContent = 'Message sent!'
+
+                setTimeout(()=>{
+                    contactMessage.textContent = ''
+                }, 5000)
+            }, (error)=>{
+                alert('OPPs! Something has failed....' , error)
+            })
+    }
+}
+contactForm.addEventListener('submit', sendEmail)

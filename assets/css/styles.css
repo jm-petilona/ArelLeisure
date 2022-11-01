@@ -124,6 +124,10 @@ body.light-theme{
 .light-theme .nav__menu{
   background-color: hsla(var(--second-hue), 32%, 90% , .3);
 }
+.light-theme .img--logo img{
+  filter: invert(100%);
+  -webkit-filter: invert(100%);
+}
 .light-theme .section__subtitle{
   color: var(--text-color);
 }
@@ -210,11 +214,19 @@ body.light-theme{
   align-items: center;
 }
 .nav__logo{
+  padding-left: 2rem;
   color: var(--first-color);
   font-weight: var(--font-medium);
   transition: .4s;
 }
-
+.img--logo{
+  filter: invert(100%);
+  -webkit-filter: invert(100%);
+  width: 45px;
+  height: 50px;
+  padding-top: .3rem;
+  cursor: pointer;
+}
 .nav__logo:hover{
   color: var(--first-color-alt);
 }
@@ -672,6 +684,12 @@ body.light-theme{
   border-radius: .75rem;
   z-index: 1;
 }
+.color-red{
+  color: hsl(4, 71%, 50%);
+}
+.color-blue{
+  color: hsl(207, 56%, 45%);
+}
 .button--send:hover{
   transition: .4s;
   background-color: transparent;
@@ -788,6 +806,12 @@ body.light-theme{
   .photos__filters{
     column-gap: .25rem;
   }
+  .contact__message-alert{
+    display: flex;
+    padding-top: 10.9rem;
+    padding-left: 1rem;
+    font-size: var(--smaller-font-size);
+  }
 }
 /* For medium devices */
 @media screen and (min-width: 576px){
@@ -837,16 +861,23 @@ body.light-theme{
     width: 360px;
     margin: 0 auto;
   }
-
+  
+}
+@media screen and (min-width: 300px) {
+  .contact__message-alert{
+    padding-top: 10.9rem;
+    padding-left: 1rem;
+    font-size: var(--smaller-font-size);
+  }
 }
 @media screen and (min-width: 767px){
   .photos__container{
     grid-template-columns: repeat(2, max-content);
   }
-  .contact__container{
-    grid-template-columns: repeat(2, max-content);
-    justify-content: center;
-    column-gap: 3rem;
+  .contact__message-alert{
+    padding-top: 10.9rem;
+    padding-left: 1rem;
+    font-size: var(--smaller-font-size);
   }
 }
 /* For large devices */
@@ -931,6 +962,11 @@ body.light-theme{
   }
   .contact__container{
     column-gap: 6rem;
+  }
+  .contact__message-alert{
+    padding-top: 10.9rem;
+    padding-left: 1rem;
+    font-size: var(--smaller-font-size);
   }
   .footer__social-link{
     font-size: 1.25rem;
