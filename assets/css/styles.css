@@ -863,6 +863,16 @@ body.light-theme{
   }
   
 }
+@media screen and (min-width: 767px){
+  .work__container{
+    grid-template-columns: repeat(2, max-content);
+  }
+  .contact__container{
+    grid-template-columns: repeat(2, max-content);
+    justify-content: center;
+    column-gap: 3rem;
+  }
+}
 @media screen and (min-width: 300px) {
   .contact__message-alert{
     padding-top: 10.9rem;
